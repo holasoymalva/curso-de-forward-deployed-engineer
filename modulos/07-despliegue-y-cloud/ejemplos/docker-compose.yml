@@ -1,0 +1,56 @@
+version: "3.8"
+
+# ==============================================================================
+# docker-compose.yml
+# Orquestación de servicios para la integración de Distribuidora Halcón.
+# ==============================================================================
+
+services:
+  # Servicio 1: API de prueba de Distribuidora Halcón
+  api-halcon:
+    build:
+      context: ../../../
+      dockerfile: modulos/07-despliegue-y-cloud/ejemplos/Dockerfile.api
+    container_name: halcon_api
+    environment:
+      - PUERTO=8000
+      - FALLAS=0.1
+      - LIMITE_POR_MINUTO=60
+    ports:
+      - "8000:8000"
+    networks:
+      - red-halcon
+    restart: unless-stopped
+
+  # Servicio 2: Worker de Sincronización Nexo
+  worker-sync:
+    build:
+      context: ../../../
+      dockerfile: modulos/07-despliegue-y-cloud/ejemplos/Dockerfile
+    container_name: nexo_worker
+    depends_on:
+      - api-halcon
+    environment:
+      - API_BASE_URL=http://api-halcon:8000
+      - CLIENT_ID=${CLIENT_ID:-nexo-demo}
+      - CLIENT_SECRET=${CLIENT_SECRET:-secreto-de-practica}
+      - DB_PATH=/app/datos/halcon.db
+      - INTERVALO_SYNC_SEG=${INTERVALO_SYNC_SEG:-30}
+    volumes:
+      - datos_halcon:/app/datos
+    networks:
+      - red-halcon
+    deploy:
+      resources:
+        limits:
+          memory: 256M
+          cpus: "0.5"
+    restart: unless-stopped
+
+volumes:
+  datos_halcon:
+    driver: local
+
+networks:
+  red-halcon:
+    driver: bridge

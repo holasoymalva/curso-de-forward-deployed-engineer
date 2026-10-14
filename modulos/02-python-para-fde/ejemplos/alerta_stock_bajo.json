@@ -1,0 +1,54 @@
+{
+  "generado_el": "2026-10-14T11:51:17.283075",
+  "umbral_configurado": 30,
+  "filtro_almacen": "TODOS",
+  "total_productos_analizados": 19,
+  "total_alertas_detectadas": 5,
+  "alertas": [
+    {
+      "sku": "HAL-1001",
+      "nombre": "Arroz chico",
+      "categoria": "abarrotes",
+      "almacen": "CDMX",
+      "cantidad_actual": 0,
+      "urgencia": "CRÍTICO",
+      "fecha_actualizacion": "2026-10-01"
+    },
+    {
+      "sku": "HAL-1004",
+      "nombre": "Frijol chico",
+      "categoria": "abarrotes",
+      "almacen": "MTY",
+      "cantidad_actual": 15,
+      "urgencia": "MEDIO",
+      "fecha_actualizacion": "2026-10-03"
+    },
+    {
+      "sku": "HAL-1023",
+      "nombre": "Refresco mediano",
+      "categoria": "bebidas",
+      "almacen": "CDMX",
+      "cantidad_actual": 12,
+      "urgencia": "MEDIO",
+      "fecha_actualizacion": "2026-10-05"
+    },
+    {
+      "sku": "HAL-1038",
+      "nombre": "Detergente mediano",
+      "categoria": "limpieza",
+      "almacen": "CDMX",
+      "cantidad_actual": 7,
+      "urgencia": "ALTO",
+      "fecha_actualizacion": "2026-10-07"
+    },
+    {
+      "sku": "HAL-1042",
+      "nombre": "Cloro grande",
+      "categoria": "limpieza",
+      "almacen": "GDL",
+      "cantidad_actual": 18,
+      "urgencia": "MEDIO",
+      "fecha_actualizacion": "2026-10-08"
+    }
+  ]
+}

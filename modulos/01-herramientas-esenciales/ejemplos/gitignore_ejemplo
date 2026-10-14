@@ -1,0 +1,55 @@
+# ==============================================================================
+# .gitignore modelo para proyectos de Forward Deployed Engineer
+# ==============================================================================
+
+# --- Entornos Virtuales y Dependencias Locales ---
+.venv/
+venv/
+env/
+ENV/
+build/
+dist/
+*.egg-info/
+
+# --- Compilación y cachés de Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# --- Secretos, llaves y variables de entorno (¡CRÍTICO!) ---
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.cert
+*.crt
+id_rsa
+id_rsa.pub
+
+# --- Bases de datos locales y volcados temporales ---
+*.sqlite
+*.sqlite3
+*.db
+*.dump
+*.sql.gz
+
+# --- Registros y logs operativos ---
+logs/
+*.log
+*.log.*
+npm-debug.log*
+yarn-debug.log*
+
+# --- Archivos específicos del sistema operativo o editores ---
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+*~

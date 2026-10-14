@@ -1,0 +1,8 @@
+id_tienda,nombre_tienda,contacto,telefono,correo,ciudad,estado
+T0001,Abarrotes Doña Mary,María Hernández,8112345678,mary.abarrotes@ejemplo.com,Monterrey,Nuevo León
+T0002,Minisuper El Güero,José Martínez,3311223344,elguero@ejemplo.com,Guadalajara,Jalisco
+T0003,Tienda La Esquinita,Ana Ramírez,5511122233,laesquinita@ejemplo.com,Ciudad de México,CDMX
+T0004,Abarrotes San Judas,Pedro Sánchez,81-1234-9999,,San Nicolás,Nuevo León
+T0005,Super Lupita,Guadalupe Torres,(33) 4455 6677,lupita@ejemplo,Zapopan,Jalisco
+T0006,Miscelánea Los Pinos,Carlos Flores,5598765432,lospinos@ejemplo.com,Coyoacán,CDMX
+T0002,Minisuper El Güero,José Martínez,3311223344,elguero@ejemplo.com,Guadalajara,Jalisco

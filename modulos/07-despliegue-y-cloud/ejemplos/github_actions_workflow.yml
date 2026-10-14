@@ -1,0 +1,52 @@
+# ==============================================================================
+# Pipeline de CI/CD para GitHub Actions (.github/workflows/ci.yml)
+# Verifica la calidad del código, pruebas unitarias y construcción de Docker.
+# ==============================================================================
+
+name: CI/CD Pipeline - Conector Nexo
+
+on:
+  push:
+    branches: [main, "feature/**"]
+  pull_request:
+    branches: [main]
+
+jobs:
+  verificacion-codigo:
+    name: Verificación de Código y Pruebas
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Descargar código fuente
+        uses: actions/checkout@v4
+
+      - name: Configurar entorno de Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+
+      - name: Compilar y verificar sintaxis de scripts
+        run: |
+          python -m py_compile modulos/06-integracion-de-sistemas/ejemplos/cliente_resiliente.py
+          python -m py_compile modulos/07-despliegue-y-cloud/ejemplos/worker_sincronizacion.py
+          python -m py_compile recursos/api-simulada/servidor.py
+
+  construccion-docker:
+    name: Construcción de Imágenes Docker
+    needs: verificacion-codigo
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Descargar código fuente
+        uses: actions/checkout@v4
+
+      - name: Configurar Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Construir imagen de la API
+        run: |
+          docker build -t halcon-api:test -f modulos/07-despliegue-y-cloud/ejemplos/Dockerfile.api .
+
+      - name: Construir imagen del Worker
+        run: |
+          docker build -t nexo-worker:test -f modulos/07-despliegue-y-cloud/ejemplos/Dockerfile .

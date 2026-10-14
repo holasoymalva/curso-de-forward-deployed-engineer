@@ -1,0 +1,18 @@
+# ==============================================================================
+# Dockerfile.api para Servidor Simulado de Distribuidora Halcón (Módulo 07)
+# ==============================================================================
+
+FROM python:3.10-slim
+
+ENV PYTHONUNBUFFERED=1
+
+RUN useradd -m -u 1000 halconuser
+WORKDIR /app
+
+COPY --chown=halconuser:halconuser recursos/api-simulada/servidor.py /app/servidor.py
+
+USER halconuser
+
+EXPOSE 8000
+
+CMD ["python", "servidor.py"]

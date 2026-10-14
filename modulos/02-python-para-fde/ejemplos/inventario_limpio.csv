@@ -1,0 +1,20 @@
+sku,nombre,categoria,almacen,cantidad,precio,fecha_actualizacion
+HAL-1001,Arroz chico,abarrotes,MTY,120,18.5,2026-10-01
+HAL-1001,Arroz chico,abarrotes,GDL,85,18.5,2026-10-01
+HAL-1001,Arroz chico,abarrotes,CDMX,0,18.5,2026-10-01
+HAL-1002,Arroz mediano,abarrotes,MTY,64,32.9,2026-10-02
+HAL-1003,Arroz grande,abarrotes,MTY,210,58.0,2026-10-02
+HAL-1004,Frijol chico,abarrotes,MTY,15,22.1,2026-10-03
+HAL-1006,Frijol grande,abarrotes,GDL,90,76.5,2026-10-04
+HAL-1007,Azúcar chico,abarrotes,MTY,300,19.9,2026-10-04
+HAL-1008,Azúcar mediano,abarrotes,CDMX,48,35.0,2026-10-04
+HAL-1022,Refresco chico,bebidas,MTY,500,14.0,2026-10-05
+HAL-1022,Refresco chico,bebidas,GDL,420,14.0,2026-10-05
+HAL-1023,Refresco mediano,bebidas,CDMX,12,24.5,2026-10-05
+HAL-1025,Agua chico,bebidas,GDL,250,9.5,2026-10-06
+HAL-1037,Detergente chico,limpieza,MTY,33,27.8,2026-10-07
+HAL-1038,Detergente mediano,limpieza,CDMX,7,49.9,2026-10-07
+HAL-1039,Detergente grande,limpieza,GDL,60,89.0,2026-10-07
+HAL-1040,Cloro chico,limpieza,MTY,140,16.4,2026-10-08
+HAL-1041,Cloro mediano,limpieza,CDMX,95,28.6,2026-10-08
+HAL-1042,Cloro grande,limpieza,GDL,18,45.3,2026-10-08

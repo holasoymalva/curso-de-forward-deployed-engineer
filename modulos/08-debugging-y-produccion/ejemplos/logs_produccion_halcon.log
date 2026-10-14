@@ -1,0 +1,19 @@
+{"timestamp": "2026-10-14T03:15:01.002Z", "nivel": "INFO", "mensaje": "Worker de sincronización iniciado", "cliente_id": "halcon-mty", "ambiente": "produccion"}
+{"timestamp": "2026-10-14T03:15:02.150Z", "nivel": "INFO", "mensaje": "Autenticación exitosa en /auth/token", "cliente_id": "halcon-mty", "duracion_ms": 112.4, "expires_in": 300}
+{"timestamp": "2026-10-14T03:15:03.450Z", "nivel": "INFO", "mensaje": "Petición GET /productos exitosa", "cliente_id": "halcon-mty", "codigo_http": 200, "duracion_ms": 84.1, "registros": 50}
+{"timestamp": "2026-10-14T03:15:05.100Z", "nivel": "INFO", "mensaje": "Petición GET /inventario?almacen=MTY exitosa", "cliente_id": "halcon-mty", "codigo_http": 200, "duracion_ms": 95.3, "registros": 48}
+{"timestamp": "2026-10-14T03:18:12.300Z", "nivel": "WARNING", "mensaje": "Respuesta 503 Service Unavailable en /pedidos", "cliente_id": "halcon-mty", "codigo_http": 503, "reintento": 1, "espera_seg": 1.25}
+{"timestamp": "2026-10-14T03:18:13.600Z", "nivel": "INFO", "mensaje": "Reintento 1 exitoso tras 503", "cliente_id": "halcon-mty", "codigo_http": 200, "duracion_ms": 110.0}
+{"timestamp": "2026-10-14T03:20:05.000Z", "nivel": "INFO", "mensaje": "Procesando lote de pedidos pendientes", "cliente_id": "halcon-mty", "lote_tamano": 120}
+{"timestamp": "2026-10-14T03:20:15.800Z", "nivel": "ERROR", "mensaje": "HTTP 401 Unauthorized en /pedidos: Token ausente o expirado", "cliente_id": "halcon-mty", "codigo_http": 401, "duracion_ms": 45.2, "solicitud_id": "req-1092a"}
+{"timestamp": "2026-10-14T03:20:16.100Z", "nivel": "WARNING", "mensaje": "Detectado 401. Intentando renovación reactiva de token...", "cliente_id": "halcon-mty"}
+{"timestamp": "2026-10-14T03:20:16.450Z", "nivel": "ERROR", "mensaje": "Falla al conectar con /auth/token: Connection timed out", "cliente_id": "halcon-mty", "error_red": "TimeoutError", "duracion_ms": 5002.1}
+{"timestamp": "2026-10-14T03:20:21.500Z", "nivel": "WARNING", "mensaje": "Reintentando renovación de token con backoff...", "cliente_id": "halcon-mty", "intento": 1, "espera_seg": 2.1}
+{"timestamp": "2026-10-14T03:20:23.700Z", "nivel": "INFO", "mensaje": "Token renovado con éxito en segundo intento", "cliente_id": "halcon-mty", "duracion_ms": 130.5}
+{"timestamp": "2026-10-14T03:20:24.000Z", "nivel": "INFO", "mensaje": "Reanudando procesamiento de pedidos con nuevo token", "cliente_id": "halcon-mty"}
+{"timestamp": "2026-10-14T03:21:40.100Z", "nivel": "WARNING", "mensaje": "HTTP 429 Too Many Requests: Límite por minuto excedido", "cliente_id": "halcon-mty", "codigo_http": 429, "retry_after": 25, "solicitud_id": "req-1095c"}
+{"timestamp": "2026-10-14T03:21:40.200Z", "nivel": "INFO", "mensaje": "Respetando Retry-After: durmiendo worker por 25 segundos", "cliente_id": "halcon-mty"}
+{"timestamp": "2026-10-14T03:22:05.300Z", "nivel": "INFO", "mensaje": "Worker reanudado tras espera de rate limit", "cliente_id": "halcon-mty"}
+{"timestamp": "2026-10-14T03:22:15.000Z", "nivel": "ERROR", "mensaje": "HTTP 422 Unprocessable Entity en POST /pedidos: SKU desconocido HAL-9999", "cliente_id": "halcon-mty", "codigo_http": 422, "solicitud_id": "req-1098f", "tienda": "Tienda San Judas"}
+{"timestamp": "2026-10-14T03:22:15.100Z", "nivel": "WARNING", "mensaje": "Pedido rechazado enviado a auditoria_rechazos sin interrumpir el lote", "cliente_id": "halcon-mty"}
+{"timestamp": "2026-10-14T03:23:01.000Z", "nivel": "INFO", "mensaje": "Sincronización nocturna finalizada exitosamente", "cliente_id": "halcon-mty", "total_procesados": 119, "total_rechazados": 1}

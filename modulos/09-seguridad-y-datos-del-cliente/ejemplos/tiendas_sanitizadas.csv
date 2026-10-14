@@ -1,0 +1,7 @@
+id_tienda,nombre_tienda,contacto_enmascarado,telefono_enmascarado,correo_enmascarado,contacto_pseudonimo_hash,ciudad,estado
+T0001,Abarrotes Doña Mary,M***a H*******z,******5678,m************s@ejemplo.com,e664bde8c009,Monterrey,Nuevo León
+T0002,Minisuper El Güero,J**é M******z,******3344,e*****o@ejemplo.com,a6113eb4ec1e,Guadalajara,Jalisco
+T0003,Tienda La Esquinita,A*a R*****z,******2233,l*********a@ejemplo.com,266e14efd213,Ciudad de México,CDMX
+T0004,Abarrotes San Judas,P***o S*****z,******9999,anonimo@dominio.oculto,0952a04bff90,San Nicolás,Nuevo León
+T0005,Super Lupita,G*******e T****s,******6677,l****a@ejemplo,b3dfe555ada7,Zapopan,Jalisco
+T0006,Miscelánea Los Pinos,C****s F****s,******5432,l******s@ejemplo.com,e13cd839ee94,Coyoacán,CDMX

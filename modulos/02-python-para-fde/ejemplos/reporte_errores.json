@@ -1,0 +1,71 @@
+{
+  "fecha_proceso": "2026-10-14T11:51:17.237044",
+  "total_validos": 19,
+  "total_rechazados": 4,
+  "rechazos": [
+    {
+      "linea": 6,
+      "sku_detectado": "HAL-1002",
+      "motivos": [
+        "Error en cantidad: Cantidad negativa: -5"
+      ],
+      "datos_crudos": {
+        "sku": "HAL-1002",
+        "nombre": "Arroz mediano",
+        "categoria": "Abarrotes",
+        "almacen": "gdl",
+        "cantidad": "-5",
+        "precio": "32.90",
+        "fecha_actualizacion": "2026-10-02"
+      }
+    },
+    {
+      "linea": 10,
+      "sku_detectado": "HAL-1005",
+      "motivos": [
+        "Error en cantidad: Cantidad no disponible o vacía"
+      ],
+      "datos_crudos": {
+        "sku": "HAL-1005",
+        "nombre": "Frijol mediano",
+        "categoria": "abarrotes",
+        "almacen": "CDMX",
+        "cantidad": "",
+        "precio": "41.75",
+        "fecha_actualizacion": "2026-10-03"
+      }
+    },
+    {
+      "linea": 17,
+      "sku_detectado": "HAL-1024",
+      "motivos": [
+        "Error en cantidad: Cantidad no disponible o vacía"
+      ],
+      "datos_crudos": {
+        "sku": "HAL-1024",
+        "nombre": "Refresco grande",
+        "categoria": "bebidas",
+        "almacen": "MTY",
+        "cantidad": "N/D",
+        "precio": "38.00",
+        "fecha_actualizacion": "2026-10-06"
+      }
+    },
+    {
+      "linea": 19,
+      "sku_detectado": "HAL-1026",
+      "motivos": [
+        "Almacén desconocido: 'XYZ' (permitidos: {'CDMX', 'MTY', 'GDL'})"
+      ],
+      "datos_crudos": {
+        "sku": "HAL-1026",
+        "nombre": "Agua mediano",
+        "categoria": "bebidas",
+        "almacen": "XYZ",
+        "cantidad": "100",
+        "precio": "15.00",
+        "fecha_actualizacion": "2026-10-06"
+      }
+    }
+  ]
+}
